@@ -8,7 +8,12 @@ default visible = false
 default enabled = false
 
 allowed {
-    input.role == "web-admin"
+    input.attributes.properties.role == "web-admin"
+}
+
+allowed {
+     department = input.attributes.properties.department
+     department == "tech"
 }
 
 enabled {
